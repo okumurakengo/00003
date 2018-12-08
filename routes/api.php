@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/{selectWeekNum}', 'ApiController@index');
+Route::post('/add', 'ApiController@add');
+Route::post('/delete', 'ApiController@delete');
